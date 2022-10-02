@@ -7,9 +7,9 @@ export class Statistics extends Component {
         return (
             <StatisticWrapper>
                 <StatisticTitle>Statistics</StatisticTitle>
-                <StatisticItem>Good<StatisticReview>{this.props.changeState.good}</StatisticReview></StatisticItem>
-                <StatisticItem>Neutral<StatisticReview>{this.props.changeState.neutral}</StatisticReview></StatisticItem>
-                <StatisticItem>Bad<StatisticReview>{this.props.changeState.bad}</StatisticReview></StatisticItem>
+                <StatisticItem>Good<StatisticReview>{ this.props.goodReview }</StatisticReview></StatisticItem>
+                <StatisticItem>Neutral<StatisticReview>{ this.props.neutralReview }</StatisticReview></StatisticItem>
+                <StatisticItem>Bad<StatisticReview>{ this.props.badReview }</StatisticReview></StatisticItem>
             </StatisticWrapper>
         );
     }    

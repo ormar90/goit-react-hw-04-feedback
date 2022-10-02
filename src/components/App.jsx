@@ -11,15 +11,18 @@ export class App extends Component {
 
   updateReview = (e) => {
     this.setState(prevState => {
-      prevState[e.target.name.toLowerCase()] += 1;
-    });      
+    return ({[e.target.name.toLowerCase()]: (prevState[e.target.name.toLowerCase()] += 1) })
+    });            
   }
   
   render() {
     return (
       <>
         <Feedback changeReview={this.updateReview} />
-        <Statistics changeState={this.state} />
+        <Statistics
+          goodReview={this.state.good}
+          neutralReview={this.state.neutral}
+          badReview={this.state.bad} />
       </>
     );
   }  

@@ -10,11 +10,8 @@ export class App extends Component {
   }
 
   updateReview = (e) => {
-    const currentState = e.target.name.toLowerCase()
-    // console.log(e.target.name);
-    // console.log(this.state);
     this.setState(prevState => {
-      return { currentState: prevState[e.target.name.toLowerCase()] += 1 };
+      prevState[e.target.name.toLowerCase()] += 1;
     });      
   }
   
